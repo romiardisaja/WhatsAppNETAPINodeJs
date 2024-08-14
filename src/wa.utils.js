@@ -19,17 +19,17 @@ const puppeteerOpt = {
     executablePath: CHROME_PATH
 };
 let client = void 0;
-const wwebVersion = '2.2407.3';
+// const wwebVersion = '2.2407.3';
 client = new Client(MULTI_DEVICE ? {
     puppeteer: puppeteerOpt,
     authStrategy: new LocalAuth({
         clientId: SESSION_ID
     }),
     takeoverOnConflict: !0,
-    webVersionCache: {
-        type: 'remote',
-        remotePath: `https://raw.githubusercontent.com/wppconnect-team/wa-version/main/html/${wwebVersion}.html`,
-    },
+    // webVersionCache: {
+    //     type: 'remote',
+    //     remotePath: `https://raw.githubusercontent.com/wppconnect-team/wa-version/main/html/${wwebVersion}.html`,
+    // },
 } : {
     puppeteer: puppeteerOpt,
     authStrategy: new LegacySessionAuth({
